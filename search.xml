@@ -32,4 +32,24 @@
         <tag>Codeforces</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[404]]></title>
+    <url>%2F%2F404.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[关于]]></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[一个正在奋斗的 OIer。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[friends]]></title>
+    <url>%2Ffriends%2Findex.html</url>
+    <content type="text"><![CDATA[同届 OIer Link ForwardFuture fluttersunny 倾尘 学长 Link yanQval zcysky 萧昈黎 HolyK]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
 </search>
