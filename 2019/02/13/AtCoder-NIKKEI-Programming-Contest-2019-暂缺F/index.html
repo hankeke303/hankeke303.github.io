@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="hankeke">
+
+
+
+<meta name="description" content="[AtCoder] NIKKEI Programming Contest 2019&amp;emsp;&amp;emsp;本来看见这一场的排名的画风比较正常就来补一下题，但是完全没有发现后两题的AC人数远少于我补的上一份AtCoder。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[AtCoder] NIKKEI Programming Contest 2019 (暂缺F)">
+<meta property="og:url" content="http://yoursite.com/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/index.html">
+<meta property="og:site_name" content="hankeke">
+<meta property="og:description" content="[AtCoder] NIKKEI Programming Contest 2019&amp;emsp;&amp;emsp;本来看见这一场的排名的画风比较正常就来补一下题，但是完全没有发现后两题的AC人数远少于我补的上一份AtCoder。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-12T11:06:33.277Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[AtCoder] NIKKEI Programming Contest 2019 (暂缺F)">
+<meta name="twitter:description" content="[AtCoder] NIKKEI Programming Contest 2019&amp;emsp;&amp;emsp;本来看见这一场的排名的画风比较正常就来补一下题，但是完全没有发现后两题的AC人数远少于我补的上一份AtCoder。">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="hankeke" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.jpeg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>[AtCoder] NIKKEI Programming Contest 2019 (暂缺F) | hankeke</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: false
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">hankeke</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:hankeke303@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/hankeke303/" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">hankeke</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">hankeke</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:hankeke303@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/hankeke303/" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-AtCoder-NIKKEI-Programming-Contest-2019-暂缺F" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/" class="article-date">
+      <time datetime="2019-02-13T11:41:00.000Z" itemprop="datePublished">2019-02-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      [AtCoder] NIKKEI Programming Contest 2019 (暂缺F)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="AtCoder-NIKKEI-Programming-Contest-2019"><a href="#AtCoder-NIKKEI-Programming-Contest-2019" class="headerlink" title="[AtCoder] NIKKEI Programming Contest 2019"></a>[AtCoder] NIKKEI Programming Contest 2019</h1><p>&emsp;&emsp;本来看见这一场的排名的画风比较正常就来补一下题，但是完全没有发现后两题的AC人数远少于我补的上一份AtCoder。</p>
+<a id="more"></a>
+<hr>
+<h2 id="A-Subscribers"><a href="#A-Subscribers" class="headerlink" title="A - Subscribers"></a>A - Subscribers</h2><p>&emsp;&emsp;首先始终 $max = \min(A, B)$ ，$min$ 的话如果 $A + B \leq N$ ，那么就是 $0$ ，否则就是 $A + B - N$ 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n, a, b;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	read(n), read(a), read(b);</span><br><span class="line">	<span class="keyword">if</span> (a + b &lt;= n) <span class="built_in">printf</span>(<span class="string">"%d 0\n"</span>, <span class="built_in">std</span>::min(a, b));</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, <span class="built_in">std</span>::min(a, b), a + b - n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="B-Touitsu"><a href="#B-Touitsu" class="headerlink" title="B - Touitsu"></a>B - Touitsu</h2><p>&emsp;&emsp;直接枚举每一位，看看有几个相同的就行了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n, ans;</span><br><span class="line"><span class="keyword">char</span> a[N], b[N], c[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%s%s%s"</span>, &amp;n, a + <span class="number">1</span>, b + <span class="number">1</span>, c + <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i] == b[i] &amp;&amp; b[i] == c[i]) ;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(a[i] != b[i] &amp;&amp; a[i] != c[i] &amp;&amp; b[i] != c[i]) ans += <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">else</span> ++ans;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="C-Different-Strokes"><a href="#C-Different-Strokes" class="headerlink" title="C - Different Strokes"></a>C - Different Strokes</h2><p>&emsp;&emsp;挺好一道题，就是有点简单。</p>
+<p>&emsp;&emsp;我们考虑对于每一个人来说，假设他选的集合是 $S$ ，他要最大化这个东西：</p>
+<script type="math/tex; mode=display">
+\sum_{i \in S} a[i] - \sum_{i \notin S} b[i]</script><p>&emsp;&emsp;如果我们假设 $B = \sum \limits_{i = 1} ^ n b[i]$ ，那么上式可化为：</p>
+<script type="math/tex; mode=display">
+(\sum_{i \in S} a[i] +b[i]) -B</script><p>&emsp;&emsp;因此不管是谁，都应该尽量选择 $a[i]+b[i]$ 大的位置上的数。直接用一个堆维护一下就可了。（不过好像可以直接排一下序就可以啦，我似乎傻掉了）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, a[N], b[N];</span><br><span class="line">ll ans;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp</span> &#123;</span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">operator</span> <span class="params">()</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;x, <span class="keyword">const</span> <span class="keyword">int</span> &amp;y)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> a[x] + b[x] &lt; a[y] +b[y]; </span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">std</span>::priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, cmp&gt; q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	read(n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) read(a[i]), read(b[i]), q.push(i);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) <span class="keyword">if</span> (i &amp; <span class="number">1</span>) ans += a[q.top()], q.pop(); <span class="keyword">else</span> ans -= b[q.top()], q.pop();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="D-Restore-the-Tree"><a href="#D-Restore-the-Tree" class="headerlink" title="D - Restore the Tree"></a>D - Restore the Tree</h2><p>&emsp;&emsp;怎么感觉 D 比 C 还简单啊。至少 C 还要想一会儿列个式子， 这道题好像是读完题就可以开始写了。</p>
+<p>&emsp;&emsp;因为保证新加的边始终是从祖先连向孩子的，所以图里面的边实际上表示了深度的大小关系，因此根肯定还是入度为 0 的。找到根以后拓扑排序一下就可了，最后一个拓扑到 $i$ 的点就是 $i$ 的父亲。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, x, y, rt, idg[N], fa[N];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span> &#123;</span><span class="keyword">int</span> to, ne;&#125; g[N]; <span class="keyword">int</span> head[N], tot;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;g[++tot].to = y; g[tot].ne = head[x]; head[x] = tot;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> q[N], hd, tl;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">BFS</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	q[++tl] = rt;</span><br><span class="line">	<span class="keyword">while</span> (hd &lt; tl) &#123;</span><br><span class="line">		<span class="keyword">int</span> x = q[++hd];</span><br><span class="line">		for fec(i, x, y) if (!--idg[y]) fa[y] = x, q[++tl] = y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> hzhkk</span></span><br><span class="line">	freopen(<span class="string">"hkk.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	read(n), read(m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n - <span class="number">1</span> + m; ++i) read(x), read(y), Addedge(x, y), ++idg[y];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) <span class="keyword">if</span>(!idg[i]) rt = i;</span><br><span class="line">	BFS();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, fa[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="E-Weights-on-Vertices-and-Edges"><a href="#E-Weights-on-Vertices-and-Edges" class="headerlink" title="E - Weights on Vertices and Edges"></a>E - Weights on Vertices and Edges</h2><p>&emsp;&emsp;好题啊。</p>
+<p>&emsp;&emsp;一开始我想的是肯定要从大到小枚举边要不要删。然后可以发现不在最小生成树上的边不管怎么删都不影响原图的连通性，于是可以直接把原图变成一棵树的时候，那么可以直接上 LCT 来维护连通性以及一些信息。但是似乎方法是成立的，只是额在AtCoder上如果还要写LCT，是真的不敢想啊。</p>
+<p>&emsp;&emsp;于是又思考了一个小时，也没什么新思路，只能去看了一下题解。</p>
+<p>&emsp;&emsp;是这样的，我们对于删边发过来，变成从小到大加边，用并查集来维护一下每个联通块的点权和。但是我们会发现，有些边可能之前是不能加的，但是随着后续的加边，联通块扩大了，那些边就可以加入了！</p>
+<p>&emsp;&emsp;题解提供了一种很巧妙的办法，我们对于那样的边，我们把它们的联通块先连起来，但是并查集要记录所有并没有真正加进去的边的数量，显然后面如果我们真正加边的时候，就可以把该联通块并完以后，里面没有加的边都加进去了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, w[N], ans;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span><span class="keyword">int</span> x, y, z;&#125; g[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> fa[N], num[N];</span><br><span class="line">ll sum[N];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> fa[x] == x ? x : fa[x] = Find(fa[x]);&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	fa[y = Find(y)] = x = Find(x);</span><br><span class="line">	num[x] += num[y], num[y] = <span class="number">0</span>;</span><br><span class="line">	sum[x] += sum[y], sum[y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> hzhkk</span></span><br><span class="line">	freopen(<span class="string">"hkk.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	read(n), read(m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) read(w[i]), fa[i] = i, sum[i] = w[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) read(g[i].x), read(g[i].y), read(g[i].z);</span><br><span class="line">	<span class="built_in">std</span>::sort(g + <span class="number">1</span>, g + m +<span class="number">1</span>, [](<span class="keyword">const</span> Edge &amp;a, <span class="keyword">const</span> Edge &amp;b)&#123;<span class="keyword">return</span> a.z &lt; b.z;&#125;);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> x = Find(g[i].x), y = Find(g[i].y), z = g[i].z;</span><br><span class="line">		<span class="keyword">if</span> (Find(x) != Find(y)) Union(x, y);</span><br><span class="line">		++num[x];</span><br><span class="line">		<span class="keyword">if</span> (sum[x] &gt;= z) ans += num[x], num[x] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, m - ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;后来到网上又翻了一会儿题解，发现我之前的方法还是有救的，而且还有两种解救的办法。</p>
+<p>&emsp;&emsp;第一种是通过不带路径压缩，只用按秩合并来做的并查集，这种并查集的单次操作的时间复杂度是 $O(\log n)$ 的，而且因为没有路径压缩，可以很方便地实现 Cut 操作，比 LCT 好写，当然也就只适合这道题了，并查集扩展性没有 LCT 好。</p>
+<p>&emsp;&emsp;第二种是建立 Kruskal 重构树。那么在从小到大枚举最小生成树里面的边的时候，对于一条边，如果其父亲没有被删除，那么显然他自己也不需要被删除了。因此如果判断的话，首先判断其父亲有没有被删，然后再看看其所在联通块的点权和——其现在所在联通块就是在重构树上的子树！这样的方法，因为删边时一定是从根山道这条边的，所以不需要更该其祖先的子树和的信息。</p>
+<p>&emsp;&emsp;此上三中方法的时间复杂度都是 $O(m\log n)$ 。我就只写了第一种。</p>
+<hr>
+<h2 id="F-Jewels"><a href="#F-Jewels" class="headerlink" title="F - Jewels"></a>F - Jewels</h2><p>&emsp;&emsp;想了两个小时也不会做，上网找题解也找不到，看来我可能需要去研读一下官方的英文题解。但是由于我英语比较烂，所以F可能要咕。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/">
+                    Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/02/12/AtCoder-Yahoo-Programming-Contest-2019/">
+                    [AtCoder] Yahoo Programming Contest 2019
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AtCoder-NIKKEI-Programming-Contest-2019"><span class="toc-number">1.</span> <span class="toc-text">[AtCoder] NIKKEI Programming Contest 2019</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Subscribers"><span class="toc-number">1.1.</span> <span class="toc-text">A - Subscribers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Touitsu"><span class="toc-number">1.2.</span> <span class="toc-text">B - Touitsu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-Different-Strokes"><span class="toc-number">1.3.</span> <span class="toc-text">C - Different Strokes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-Restore-the-Tree"><span class="toc-number">1.4.</span> <span class="toc-text">D - Restore the Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-Weights-on-Vertices-and-Edges"><span class="toc-number">1.5.</span> <span class="toc-text">E - Weights on Vertices and Edges</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F-Jewels"><span class="toc-number">1.6.</span> <span class="toc-text">F - Jewels</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/" title="上一篇: Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/02/12/AtCoder-Yahoo-Programming-Contest-2019/" title="下一篇: [AtCoder] Yahoo Programming Contest 2019">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/">Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/">[AtCoder] NIKKEI Programming Contest 2019 (暂缺F)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/AtCoder-Yahoo-Programming-Contest-2019/">[AtCoder] Yahoo Programming Contest 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/11/Codeforces-Round538-(Div. 2)-(CF1114)/">Codeforces Round #538 (Div. 2)(CF1114)</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2019 hankeke
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+             title: "a.article-title, .article-more-link a", 
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

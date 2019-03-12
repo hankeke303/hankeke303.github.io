@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="hankeke">
+
+
+
+<meta name="description" content="Codeforces Global Round 1 (CF1110)继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。 因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）">
+<meta property="og:url" content="http://yoursite.com/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/index.html">
+<meta property="og:site_name" content="hankeke">
+<meta property="og:description" content="Codeforces Global Round 1 (CF1110)继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。 因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-12T11:05:07.167Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）">
+<meta name="twitter:description" content="Codeforces Global Round 1 (CF1110)继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。 因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="hankeke" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.jpeg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Codeforces Global Round 1 (CF1110) （未完结，只有 A-F） | hankeke</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: false
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">hankeke</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:hankeke303@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/hankeke303/" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">hankeke</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">hankeke</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:hankeke303@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/hankeke303/" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/" class="article-date">
+      <time datetime="2019-02-15T02:55:00.000Z" itemprop="datePublished">2019-02-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Codeforces-Global-Round-1-CF1110"><a href="#Codeforces-Global-Round-1-CF1110" class="headerlink" title="Codeforces Global Round 1 (CF1110)"></a>Codeforces Global Round 1 (CF1110)</h1><p>继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。</p>
+<p>因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。</p>
+<a id="more"></a>
+<hr>
+<h2 id="A-Parity"><a href="#A-Parity" class="headerlink" title="A. Parity"></a>A. Parity</h2><p>保存 <code>%2</code> 的值就可以了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> b, k, a[N], ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	read(b), read(k);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; ++i) read(a[i]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = k, p = <span class="number">1</span>; i; --i, p = p * b % <span class="number">2</span>) (ans += a[i] * p) %= <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span> (ans) <span class="built_in">puts</span>(<span class="string">"odd"</span>); <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"even"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="B-Tape"><a href="#B-Tape" class="headerlink" title="B. Tape"></a>B. Tape</h2><p>一开始准备二分，然后发现他要的是最小的总长度，不太好二分。然后发现我们在断的时候，应该尽量把间隙比较大的优先断掉，所以直接贪心，排个序就可以了。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, k, a[N], b[N], c[N], ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	read(n), read(m), read(k);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) read(a[i]), b[i - <span class="number">1</span>] = a[i] - a[i - <span class="number">1</span>], c[i] = i;</span><br><span class="line">	<span class="built_in">std</span>::sort(c + <span class="number">1</span>, c + n, [](<span class="keyword">const</span> <span class="keyword">int</span> &amp;x, <span class="keyword">const</span> <span class="keyword">int</span> &amp;y)&#123;<span class="keyword">return</span> b[x] &gt; b[y];&#125;);</span><br><span class="line">	<span class="built_in">std</span>::sort(c + <span class="number">1</span>, c + k); c[k] = n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; ++i) ans += a[c[i]] - a[c[i - <span class="number">1</span>] + <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="C-Meaningless-Operations"><a href="#C-Meaningless-Operations" class="headerlink" title="C. Meaningless Operations"></a>C. Meaningless Operations</h2><p>好一道打表题。</p>
+<p>想得百无聊赖之下开始打表，然后就有惊喜了。</p>
+<p>发现除了 $2^k-1$ 外的数，答案都是比他大的最小的 $2^k-1$ 。</p>
+<p>那么 $2^k-1$ 自己呢？一开始没有把表打全，以为就是如果 $k$ 是偶数，就是 $a/3$ ，否则就是 $1$ ，结果交上去 wa2.</p>
+<p>于是继续打 $2^k-1$，其实这个时候可以直接把所有的表直接复制上去。可我偏要找出规律来。好像答案都是原数的因数，而且——而且似乎还是最大的因数啊。</p>
+<p>于是就可以 A 掉了。</p>
+<script type="math/tex; mode=display">
+f(a) = \max_{0 < b < a}{gcd(a \oplus b, a \> \& \> b)}.</script><p>仔细想一下，对于这个式子，如果 $a \neq 2^k-1$ ，那么 $a$ 就不是所有位都为 $1$ ，那么令 $b = ~a$ ，那么 $a \oplus b = 2 ^ k - 1, a  > \&amp;  > b = 0$ 。于是 $gcd$ 就是 $2^k-1$。</p>
+<p>否则呢，如果 $a$ 的二进制位全是 $1$ ，那么这里的 $b$ 应该是 $0$ ，显然不满足要求。发现当 $a$ 二进制位都是 $1$ 时， $a \oplus b = a - b$， $a > \&amp; > b = b$ 。于是原式可化为 $f(a) = \max \limits_{0 &lt; b &lt; a}{gcd(a - b, b)} = \max \limits_{0 &lt; b &lt; a}{gcd(a, b)}$ 。显然当 $b | a$ 时 $f(a)$ 最大，于是 $b$ 就是 $a$ 最大的因数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> q, x;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Get</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (x) ++ans, x &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Get2</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (x == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, p = <span class="built_in">sqrt</span>(x); i &lt;= p; ++i)</span><br><span class="line">		<span class="keyword">if</span>(x % i == <span class="number">0</span>) <span class="keyword">return</span> x / i;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	read(q);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= q; ++i) &#123;</span><br><span class="line">		read(x); <span class="keyword">int</span> p = Get(x), s = (<span class="number">1</span> &lt;&lt; p) - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (s != x) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, s);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, Get2(s));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="D-Jongmah"><a href="#D-Jongmah" class="headerlink" title="D. Jongmah"></a>D. Jongmah</h2><p>我感觉这道题比 E,F 都难。可能是因为太菜了才会这样想。（因为目前这六道题里面只有这道题是看题解做的。。。）</p>
+<p>首先最重要的结论是 $(i, i + 1, i + 2)$ 这样的顺子最多取两个，否则可以自己先把对子 $(i , i, i)$取完是不会比原方案差的。</p>
+<p>于是我们限制一下顺子取的个数就可以了。</p>
+<p>设 $dp[i][j][k]$ 表示 dp 到第 $i$ 个数，保证对子 $(i - 1, i, i + 1)$ 取 $j$ 个，对子 $(i, i + 1, i + 2)$ 取 $k$ 个。</p>
+<p>那么有</p>
+<script type="math/tex; mode=display">
+dp[i][j][k] = \max_{l = 0} ^ 2 {dp[i][l][j] + k + \lfloor \frac{num[i] - j - k - l}3 \rfloor}</script><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e6</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, x, a[N], dp[N][<span class="number">3</span>][<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> hzhkk</span></span><br><span class="line">	freopen(<span class="string">"hkk.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	read(n); read(m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) read(x), ++a[x];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) </span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">2</span>; ++j)</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt;= <span class="number">2</span>; ++k)</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l &lt;= <span class="number">2</span>; ++l)</span><br><span class="line">					<span class="keyword">if</span>(a[i] &gt;= j + k + l) SMAX(dp[i][j][k], dp[i - <span class="number">1</span>][l][j] + k + (a[i] - j - k - l) / <span class="number">3</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dp[m][<span class="number">0</span>][<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="E-Magic-Stones"><a href="#E-Magic-Stones" class="headerlink" title="E. Magic Stones"></a>E. Magic Stones</h2><p>一开始捣鼓了半天推出了一堆奇怪的没有用的性质。于是后来干脆直接划掉重新换个思路思考。</p>
+<p>记得好像对于序列上进行变化的题目好多都是用差分来做的，所以我开始从差分上考虑。</p>
+<p>然后发现好像差分完就没了。</p>
+<script type="math/tex; mode=display">
+c_i' = c_{i + 1} + c_{i - 1} - c_i\\
+\text{可以推得}\\
+c_{i + 1} - c_i' = c_i - c_{i - 1}\\
+c_i' - c_{i - 1} = c_{i + 1} - c_i</script><p>也就是说一次操作其实是把差分数组上两个数交换一下。</p>
+<p>注意要特判一下两端的原数据，因为两端不可以进行操作。一开始没有注意，就wa4了一次。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, c[N], t[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> hzhkk</span></span><br><span class="line">	freopen(<span class="string">"hkk.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	read(n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) read(c[i]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) read(t[i]);</span><br><span class="line">	<span class="keyword">if</span> (c[<span class="number">1</span>] != t[<span class="number">1</span>] || c[n] != t[n]) <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt; <span class="number">1</span>; --i) c[i] = c[i] - c[i - <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt; <span class="number">1</span>; --i) t[i] = t[i] - t[i - <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">std</span>::sort(c + <span class="number">2</span>, c + n + <span class="number">1</span>);</span><br><span class="line">	<span class="built_in">std</span>::sort(t + <span class="number">2</span>, t + n + <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span> (!<span class="built_in">memcmp</span>(c + <span class="number">2</span>, t + <span class="number">2</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>) * (n - <span class="number">1</span>))) <span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="F-Nearest-Leaf"><a href="#F-Nearest-Leaf" class="headerlink" title="F. Nearest Leaf"></a>F. Nearest Leaf</h2><p>映象中这道题好像是我们学校学长暑假讲过的原题，但是记不起来了，去翻 ppt 却很神奇地没有找到。</p>
+<p>但是不影响这道题确实不难。</p>
+<p>显然是离线，把询问挂在 $v$ 上，假设 $dis[i]$ 表示 $v$ 到 $i$ 的距离，可以发现，从父亲跳到儿子，会把儿子的子树内的点的 $dis$ 值加上 $w$ ( $w$ 是边权)，其余的点减上 $w$ 。</p>
+<p>直接线段树维护即可。</p>
+<p>注意代码里面的 $dis$ 数组和上面的分析里面的 $dis$ 不是一个东西。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::min;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lc o &lt;&lt; 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rc o &lt;&lt; 1 | 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5e5</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> ll INF = <span class="number">0x3f3f3f3f3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, x, y, z, dfc, fa[N], dfn[N], num[N], w[N];</span><br><span class="line">ll dis[N], ans[N];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span> &#123;</span><span class="keyword">int</span> to, ne, w;&#125; g[N &lt;&lt; <span class="number">1</span>]; <span class="keyword">int</span> head[N], tot;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;g[++tot].to = y; g[tot].w = z; g[tot].ne = head[x]; head[x] = tot;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Question</span>&#123;</span><span class="keyword">int</span> l, r; ll *ans;&#125;;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Question&gt; q[N];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span>ll val, add;&#125; t[N &lt;&lt; <span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Build</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> L, <span class="keyword">int</span> R)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (L == R) <span class="keyword">return</span> (<span class="keyword">void</span>)(t[o].val = dis[L]);</span><br><span class="line">	<span class="keyword">int</span> M = L + R &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	Build(lc, L, M); Build(rc, M + <span class="number">1</span>, R);</span><br><span class="line">	t[o].val = min(t[lc].val, t[rc].val);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> l, <span class="keyword">int</span> r, ll k)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// dbg("o = %d, L = %d, R = %d, l = %d, r = %d, k = %d\n", o, L, R, l, r, k);</span></span><br><span class="line">	<span class="keyword">if</span> (l &lt;= L &amp;&amp; R &lt;= r) <span class="keyword">return</span> (<span class="keyword">void</span>)(t[o].add += k, t[o].val += k);</span><br><span class="line">	<span class="keyword">int</span> M = L + R &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (l &lt;= M) Add(lc, L, M, l, r, k);</span><br><span class="line">	<span class="keyword">if</span> (r &gt; M) Add(rc, M + <span class="number">1</span>, R, l, r, k);</span><br><span class="line">	t[o].val = min(t[lc].val, t[rc].val) + t[o].add;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">Qmin</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l &lt;= L &amp;&amp; R &lt;= r) <span class="keyword">return</span> t[o].val;</span><br><span class="line">	<span class="keyword">int</span> M = L + R &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (r &lt;= M) <span class="keyword">return</span> Qmin(lc, L, M, l, r) + t[o].add;</span><br><span class="line">	<span class="keyword">if</span> (l &gt; M) <span class="keyword">return</span> Qmin(rc, M + <span class="number">1</span>, R, l, r) + t[o].add;</span><br><span class="line">	<span class="keyword">return</span> min(Qmin(lc, L, M, l, r), Qmin(rc, M + <span class="number">1</span>, R, l, r)) + t[o].add;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs_pre</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	num[x] = <span class="number">1</span>;</span><br><span class="line">	for fec(i, x, y) dfs_pre(y), num[x] += num[y];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		Add(<span class="number">1</span>, <span class="number">1</span>, n, <span class="number">1</span>, n, w[x]);</span><br><span class="line">		Add(<span class="number">1</span>, <span class="number">1</span>, n, x, x + num[x] - <span class="number">1</span>, -w[x] &lt;&lt; <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> i : q[x]) *i.ans = Qmin(<span class="number">1</span>, <span class="number">1</span>, n, i.l, i.r);</span><br><span class="line">	<span class="function"><span class="keyword">for</span> <span class="title">fec</span><span class="params">(i, x, y)</span> <span class="title">dfs</span><span class="params">(y)</span></span>;</span><br><span class="line">	<span class="keyword">if</span>(x &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		Add(<span class="number">1</span>, <span class="number">1</span>, n, <span class="number">1</span>, n, -w[x]);</span><br><span class="line">		Add(<span class="number">1</span>, <span class="number">1</span>, n, x, x + num[x] - <span class="number">1</span>, w[x] &lt;&lt; <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> hzhkk</span></span><br><span class="line">	freopen(<span class="string">"hkk.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	read(n), read(m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) read(y), read(z), dis[i] = dis[y] + z,  Addedge(fa[i] = y, i, w[i] = z);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) dis[fa[i]] = INF;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) read(x), read(y), read(z), q[x].pb((Question)&#123;y, z, ans + i&#125;);</span><br><span class="line">	Build(<span class="number">1</span>, <span class="number">1</span>, n); dfs_pre(<span class="number">1</span>); dfs(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/">
+                    [AtCoder] NIKKEI Programming Contest 2019 (暂缺F)
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Codeforces-Global-Round-1-CF1110"><span class="toc-number">1.</span> <span class="toc-text">Codeforces Global Round 1 (CF1110)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Parity"><span class="toc-number">1.1.</span> <span class="toc-text">A. Parity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Tape"><span class="toc-number">1.2.</span> <span class="toc-text">B. Tape</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-Meaningless-Operations"><span class="toc-number">1.3.</span> <span class="toc-text">C. Meaningless Operations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-Jongmah"><span class="toc-number">1.4.</span> <span class="toc-text">D. Jongmah</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-Magic-Stones"><span class="toc-number">1.5.</span> <span class="toc-text">E. Magic Stones</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F-Nearest-Leaf"><span class="toc-number">1.6.</span> <span class="toc-text">F. Nearest Leaf</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/" title="下一篇: [AtCoder] NIKKEI Programming Contest 2019 (暂缺F)">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/">Codeforces Global Round 1 (CF1110) （未完结，只有 A-F）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/">[AtCoder] NIKKEI Programming Contest 2019 (暂缺F)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/AtCoder-Yahoo-Programming-Contest-2019/">[AtCoder] Yahoo Programming Contest 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/11/Codeforces-Round538-(Div. 2)-(CF1114)/">Codeforces Round #538 (Div. 2)(CF1114)</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2019 hankeke
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+             title: "a.article-title, .article-more-link a", 
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
