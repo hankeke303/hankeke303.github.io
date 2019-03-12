@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
 
     <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
 <meta property="og:title" content="hankeke">
 <meta property="og:url" content="hankeke303.github.io/archives/2019/02/index.html">
 <meta property="og:site_name" content="hankeke">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hankeke">
 
@@ -69,7 +69,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: false
+        search: true
     }
 </script>
 
@@ -100,7 +100,16 @@
         </hgroup>
 
         
+        <p class="header-subtitle">hankeke 的博客</p>
+        
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
         
 
 
@@ -154,11 +163,13 @@
                         
                             <li><a href="/">主页</a></li>
                         
-                            <li><a href="/archives/">所有文章</a></li>
+                            <li><a href="/archives/">归档</a></li>
                         
-                            <li><a href="/tags/">标签云</a></li>
+                            <li><a href="/tags/">标签</a></li>
                         
-                            <li><a href="/about/">关于我</a></li>
+                            <li><a href="/friends/">友链</a></li>
+                        
+                            <li><a href="/about/">关于</a></li>
                         
                         </ul>
                     </nav>
@@ -178,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
                     </div>
                 </section>
                 
@@ -201,7 +212,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">一个有信仰的 OIer</div>
                 </section>
                 
             </div>
@@ -224,16 +235,20 @@
               <h1 class="header-author"><a href="/" title="回到主页">hankeke</a></h1>
             </hgroup>
             
+            <p class="header-subtitle">hankeke 的博客</p>
+            
             <nav class="header-menu">
                 <ul>
                 
                     <li><a href="/">主页</a></li>
                 
-                    <li><a href="/archives/">所有文章</a></li>
+                    <li><a href="/archives/">归档</a></li>
                 
-                    <li><a href="/tags/">标签云</a></li>
+                    <li><a href="/tags/">标签</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
+                    <li><a href="/friends/">友链</a></li>
+                
+                    <li><a href="/about/">关于</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -287,6 +302,10 @@
           
 
           
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
+    </div>
+
         </div>
         <div class="clearfix"></div>
     </header>
@@ -316,6 +335,10 @@
           
 
           
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AtCoder/">AtCoder</a></li></ul>
+    </div>
+
         </div>
         <div class="clearfix"></div>
     </header>
@@ -329,7 +352,7 @@
     <header class="archive-article-header">
           <div class="article-meta">
               <a href="/2019/02/12/AtCoder-Yahoo-Programming-Contest-2019/" class="archive-article-date">
-      <time datetime="2019-02-12T02:31:54.000Z" itemprop="datePublished">02-12</time>
+      <time datetime="2019-02-12T02:31:00.000Z" itemprop="datePublished">02-12</time>
 </a>
 
 
@@ -345,6 +368,10 @@
           
 
           
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AtCoder/">AtCoder</a></li></ul>
+    </div>
+
         </div>
         <div class="clearfix"></div>
     </header>
@@ -374,6 +401,10 @@
           
 
           
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
+    </div>
+
         </div>
         <div class="clearfix"></div>
     </header>
