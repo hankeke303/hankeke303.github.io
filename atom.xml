@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.violetoj.com/"/>
-  <updated>2019-03-13T11:04:54.747Z</updated>
+  <updated>2019-03-14T02:17:37.869Z</updated>
   <id>https://www.violetoj.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>卡常者π酱 题解</title>
+    <link href="https://www.violetoj.com/2019/03/14/%E5%8D%A1%E5%B8%B8%E8%80%85%CF%80%E9%85%B1-%E9%A2%98%E8%A7%A3/"/>
+    <id>https://www.violetoj.com/2019/03/14/卡常者π酱-题解/</id>
+    <published>2019-03-14T02:14:53.000Z</published>
+    <updated>2019-03-14T02:17:37.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>现在终于可以公布一下这道题目的改编来源了。</p><p><a href="http://codeforces.com/contest/1120/problem/C" target="_blank" rel="noopener">http://codeforces.com/contest/1120/problem/C</a></p><p>CF1120 C 的数据范围就是 $n \leq 5000$ 。</p><p>大概把 CF 上原题的代码复制粘贴过来可以获得 $15-20\ pts$。</p><a id="more"></a><h2 id="n-leq-5000-以及-随机数据"><a href="#n-leq-5000-以及-随机数据" class="headerlink" title="$n \leq 5000$ 以及 随机数据"></a>$n \leq 5000$ 以及 随机数据</h2><p>这个数据范围显然是 $O(n^2)$。可能会带一个 $\log$。</p><p>我提供一个 憧憬未来 神仙在 CF 上的做法。我的做法一会儿再讲。</p><p>我们设 $dp[i]$ 表示前 $i$ 位的最小花费。我们采用刷表法来更新后续状态。</p><script type="math/tex; mode=display">dp[i] + b \rightarrow dp[j]\ |\ i < j , s_{i+1..j} \subseteq s_{1..i}</script><p>怎么判断 $s_{i + 1..j}$ 怎么判断是不是前面 $1..i$ 的字串呢？我们只需要对前 $i$ 的字符建立 SAM，然后在上面跑就可以了，一直到无法继续向下走就可以了。</p><p>这样的时间复杂度是 $O(n^2)$。但是如果数据随机的话，那么不会跑太长的串就会被断掉，所以是可以通过随机数据的。</p><h2 id="n-leq-50000"><a href="#n-leq-50000" class="headerlink" title="$n \leq 50000$"></a>$n \leq 50000$</h2><p>我们暂时先不介绍 $n \leq 50000$ 的做法。先来讲一下我在 CF 上的写法。</p><p>因为我对于刷表不太熟悉，所以直接考虑了怎么填表，所以方法相比于上一种略微繁琐。</p><p>我们发现问题就是判断 $j + 1$ 到 $i$ 的部分是不是 $1$ 到 $j$ 部分的字串，$i$ 是固定的。</p><p>如果能够在 parent 树上找到 $j + 1$ 到 $i$ 部分对应的点的话，那么其实就是判断这个点的 $endpos$ 集合（也叫 $right$ 集合，两种不同的叫法）里面是否有 $1$ 到 $j$ 区间内的点。这个可以用线段树合并解决。</p><p>但是现在的问题就只剩一个了。如何找到 $j + 1$ 到 $i$ 的串在 parent 树上的点。我们发现，如果把 $j$ 从 $i - 1$ 到 $0$ 倒序循环，那么就相当于每次在一个串的前面加上一个字符。这个过程实际上就是在 parent 树上向下走的过程。如果现在这个串的长度仍然小于等于当前节点的 $maxlen$，那么就应该停留在原地。如果大于了，那么需要选择一个合适的孩子向下走。具体的选择方法可以参考这个串上的对应位置的字符。</p><p>我们可以 $O(n^2\log n)$ 解决这个 $n \leq 5000$ 的问题，但是显然会被上面的吊打。</p><p>但是我们发现，肯定存在一个位置 $p$ 使得 $\forall j \in [1, p]$，$j + 1$ 到 $i$ 的串不是 $1$ 到 $j$ 的子串，而 $\forall j \in (p, i)$ 都有 $j + 1$ 到 $i$ 的串是 $1$ 到 $j$ 的子串。也就是说，是否是字串这一条件是单调的。</p><p>于是我们可以二分或者倍增地求出这个 $p$ 值，然后通过线段树查询 $(p, i)$ 区间内的 $dp$ 值的最小值，转移即可。</p><p>时间复杂度 $O(n \log^2 n)$。如果常数小也许能过吧，没有试过。<del>一个 $\log$ 的std都很卡常了。。。</del></p><h2 id="由一个字符构成"><a href="#由一个字符构成" class="headerlink" title="由一个字符构成"></a>由一个字符构成</h2><p>如果 $b \leq a$，那么策略很显然。</p><p>第一个字符花费 $a$，第二个字符花费 $b$，第 $3-4$ 个字符组成的字符串花费 $b$，第 $5-9$ 个字符组成的字符串花费 $b$ ……像这样倍增下去即可。</p><p>但是如果 $b &gt; a$ ，那么 $b$ 就不是在任何情况下都是最优的了。令 $k = \lceil\frac ba\rceil$，那么就应该对于前 $k$ 个字符每一个都花费 $a$ 元。后面继续向上面一样每次花费 $b$ 倍增即可。</p><h2 id="n-leq-500000"><a href="#n-leq-500000" class="headerlink" title="$n \leq 500000$"></a>$n \leq 500000$</h2><p>其实正解与 $n \leq 50000$ 的部分分相差不大，因为是第一次出题，所以不太会配置部分分，所有导致严重不合理。</p><p>我们发现，当 $i$ 向右移动到 $i + 1$ 的时候，$p$ 点的位置应该是非严格单调增的。证明的话可以伪证一下：</p><ul><li>假设 $p$  点移动到了 $p’$，那么就是说 $\forall j \in (p’, i + 1)$，都有 $j + 1$ 到 $i + 1$ 的串是 $1$ 到 $j$ 的子串。</li><li>又因为 $j + 1$ 到 $i$ 是 $j + 1$ 到 $i + 1$ 的字串，所以可以$\forall j \in (p’, i)$，都有 $j + 1$ 到 $i$ 的串 $1$ 到 $j$ 的子串。</li><li>因此 $(p’, i) \subseteq (p, i)$ ，即 $p’ \geq p$。</li></ul><p>那么有了这个性质，我们可以每次更新 $i$ 的时候把 $p$ 向右移动直到能够匹配，然后单调队列或者线段树维护一下就可以了。这样就不需要每次重新算了，$p$ 的位置最多一共向右移动 $n$ 次，时间复杂度 $O(n\log n)$。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在终于可以公布一下这道题目的改编来源了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://codeforces.com/contest/1120/problem/C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://codeforces.com/contest/1120/problem/C&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CF1120 C 的数据范围就是 $n \leq 5000$ 。&lt;/p&gt;
+&lt;p&gt;大概把 CF 上原题的代码复制粘贴过来可以获得 $15-20\ pts$。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="后缀自动机" scheme="https://www.violetoj.com/tags/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/"/>
+    
+      <category term="单调队列" scheme="https://www.violetoj.com/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
+    
+      <category term="线段树合并" scheme="https://www.violetoj.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Codeforces Global Round 1 (CF1110)（A-F）</title>

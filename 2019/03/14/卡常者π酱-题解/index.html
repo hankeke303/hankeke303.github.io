@@ -25,17 +25,18 @@
   gtag('config', 'UA-136074749-1');
 </script>
 
-<meta name="description" content="一个正在奋斗的 OIer。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://www.violetoj.com/about/index.html">
+<meta name="description" content="现在终于可以公布一下这道题目的改编来源了。 http://codeforces.com/contest/1120/problem/C CF1120 C 的数据范围就是 $n \leq 5000$ 。 大概把 CF 上原题的代码复制粘贴过来可以获得 $15-20\ pts$。">
+<meta name="keywords" content="后缀自动机,单调队列,线段树合并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卡常者π酱 题解">
+<meta property="og:url" content="https://www.violetoj.com/2019/03/14/卡常者π酱-题解/index.html">
 <meta property="og:site_name" content="hankeke">
-<meta property="og:description" content="一个正在奋斗的 OIer。">
+<meta property="og:description" content="现在终于可以公布一下这道题目的改编来源了。 http://codeforces.com/contest/1120/problem/C CF1120 C 的数据范围就是 $n \leq 5000$ 。 大概把 CF 上原题的代码复制粘贴过来可以获得 $15-20\ pts$。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-12T11:54:22.311Z">
+<meta property="og:updated_time" content="2019-03-14T02:17:37.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="一个正在奋斗的 OIer。">
+<meta name="twitter:title" content="卡常者π酱 题解">
+<meta name="twitter:description" content="现在终于可以公布一下这道题目的改编来源了。 http://codeforces.com/contest/1120/problem/C CF1120 C 的数据范围就是 $n \leq 5000$ 。 大概把 CF 上原题的代码复制粘贴过来可以获得 $15-20\ pts$。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -67,7 +68,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>关于 | hankeke</title>
+<title>卡常者π酱 题解 | hankeke</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -77,7 +78,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -281,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="about-" class="article article-type-about" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-卡常者π酱-题解" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2019-03-12T11:29:33.000Z" itemprop="datePublished">2019-03-12</time>
+      <a href="/2019/03/14/卡常者π酱-题解/" class="article-date">
+      <time datetime="2019-03-14T02:14:53.000Z" itemprop="datePublished">2019-03-14</time>
 </a>
 
 
@@ -300,7 +301,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于
+      卡常者π酱 题解
     </h1>
   
 
@@ -310,6 +311,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/单调队列/">单调队列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后缀自动机/">后缀自动机</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线段树合并/">线段树合并</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
         
           <div style="margin-top:10px;">
@@ -317,7 +322,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">8字</span>
+        <span class="post-count">1.2k字</span>
       </span>
     </span>
 
@@ -326,7 +331,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -337,26 +342,37 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
-
-
-          
-        <p>一个正在奋斗的 OIer。</p>
+        <p>现在终于可以公布一下这道题目的改编来源了。</p>
+<p><a href="http://codeforces.com/contest/1120/problem/C" target="_blank" rel="noopener">http://codeforces.com/contest/1120/problem/C</a></p>
+<p>CF1120 C 的数据范围就是 $n \leq 5000$ 。</p>
+<p>大概把 CF 上原题的代码复制粘贴过来可以获得 $15-20\ pts$。</p>
+<a id="more"></a>
+<h2 id="n-leq-5000-以及-随机数据"><a href="#n-leq-5000-以及-随机数据" class="headerlink" title="$n \leq 5000$ 以及 随机数据"></a>$n \leq 5000$ 以及 随机数据</h2><p>这个数据范围显然是 $O(n^2)$。可能会带一个 $\log$。</p>
+<p>我提供一个 憧憬未来 神仙在 CF 上的做法。我的做法一会儿再讲。</p>
+<p>我们设 $dp[i]$ 表示前 $i$ 位的最小花费。我们采用刷表法来更新后续状态。</p>
+<script type="math/tex; mode=display">
+dp[i] + b \rightarrow dp[j]\ |\ i < j , s_{i+1..j} \subseteq s_{1..i}</script><p>怎么判断 $s_{i + 1..j}$ 怎么判断是不是前面 $1..i$ 的字串呢？我们只需要对前 $i$ 的字符建立 SAM，然后在上面跑就可以了，一直到无法继续向下走就可以了。</p>
+<p>这样的时间复杂度是 $O(n^2)$。但是如果数据随机的话，那么不会跑太长的串就会被断掉，所以是可以通过随机数据的。</p>
+<h2 id="n-leq-50000"><a href="#n-leq-50000" class="headerlink" title="$n \leq 50000$"></a>$n \leq 50000$</h2><p>我们暂时先不介绍 $n \leq 50000$ 的做法。先来讲一下我在 CF 上的写法。</p>
+<p>因为我对于刷表不太熟悉，所以直接考虑了怎么填表，所以方法相比于上一种略微繁琐。</p>
+<p>我们发现问题就是判断 $j + 1$ 到 $i$ 的部分是不是 $1$ 到 $j$ 部分的字串，$i$ 是固定的。</p>
+<p>如果能够在 parent 树上找到 $j + 1$ 到 $i$ 部分对应的点的话，那么其实就是判断这个点的 $endpos$ 集合（也叫 $right$ 集合，两种不同的叫法）里面是否有 $1$ 到 $j$ 区间内的点。这个可以用线段树合并解决。</p>
+<p>但是现在的问题就只剩一个了。如何找到 $j + 1$ 到 $i$ 的串在 parent 树上的点。我们发现，如果把 $j$ 从 $i - 1$ 到 $0$ 倒序循环，那么就相当于每次在一个串的前面加上一个字符。这个过程实际上就是在 parent 树上向下走的过程。如果现在这个串的长度仍然小于等于当前节点的 $maxlen$，那么就应该停留在原地。如果大于了，那么需要选择一个合适的孩子向下走。具体的选择方法可以参考这个串上的对应位置的字符。</p>
+<p>我们可以 $O(n^2\log n)$ 解决这个 $n \leq 5000$ 的问题，但是显然会被上面的吊打。</p>
+<p>但是我们发现，肯定存在一个位置 $p$ 使得 $\forall j \in [1, p]$，$j + 1$ 到 $i$ 的串不是 $1$ 到 $j$ 的子串，而 $\forall j \in (p, i)$ 都有 $j + 1$ 到 $i$ 的串是 $1$ 到 $j$ 的子串。也就是说，是否是字串这一条件是单调的。</p>
+<p>于是我们可以二分或者倍增地求出这个 $p$ 值，然后通过线段树查询 $(p, i)$ 区间内的 $dp$ 值的最小值，转移即可。</p>
+<p>时间复杂度 $O(n \log^2 n)$。如果常数小也许能过吧，没有试过。<del>一个 $\log$ 的std都很卡常了。。。</del></p>
+<h2 id="由一个字符构成"><a href="#由一个字符构成" class="headerlink" title="由一个字符构成"></a>由一个字符构成</h2><p>如果 $b \leq a$，那么策略很显然。</p>
+<p>第一个字符花费 $a$，第二个字符花费 $b$，第 $3-4$ 个字符组成的字符串花费 $b$，第 $5-9$ 个字符组成的字符串花费 $b$ ……像这样倍增下去即可。</p>
+<p>但是如果 $b &gt; a$ ，那么 $b$ 就不是在任何情况下都是最优的了。令 $k = \lceil\frac ba\rceil$，那么就应该对于前 $k$ 个字符每一个都花费 $a$ 元。后面继续向上面一样每次花费 $b$ 倍增即可。</p>
+<h2 id="n-leq-500000"><a href="#n-leq-500000" class="headerlink" title="$n \leq 500000$"></a>$n \leq 500000$</h2><p>其实正解与 $n \leq 50000$ 的部分分相差不大，因为是第一次出题，所以不太会配置部分分，所有导致严重不合理。</p>
+<p>我们发现，当 $i$ 向右移动到 $i + 1$ 的时候，$p$ 点的位置应该是非严格单调增的。证明的话可以伪证一下：</p>
+<ul>
+<li>假设 $p$  点移动到了 $p’$，那么就是说 $\forall j \in (p’, i + 1)$，都有 $j + 1$ 到 $i + 1$ 的串是 $1$ 到 $j$ 的子串。</li>
+<li>又因为 $j + 1$ 到 $i$ 是 $j + 1$ 到 $i + 1$ 的字串，所以可以$\forall j \in (p’, i)$，都有 $j + 1$ 到 $i$ 的串 $1$ 到 $j$ 的子串。</li>
+<li>因此 $(p’, i) \subseteq (p, i)$ ，即 $p’ \geq p$。</li>
+</ul>
+<p>那么有了这个性质，我们可以每次更新 $i$ 的时候把 $p$ 向右移动直到能够匹配，然后单调队列或者线段树维护一下就可以了。这样就不需要每次重新算了，$p$ 的位置最多一共向右移动 $n$ 次，时间复杂度 $O(n\log n)$。</p>
 
       
     </div>
@@ -366,8 +382,42 @@
     
 
 
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/">
+                    Codeforces Global Round 1 (CF1110)（A-F）
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#n-leq-5000-以及-随机数据"><span class="toc-number">1.</span> <span class="toc-text">$n \leq 5000$ 以及 随机数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#n-leq-50000"><span class="toc-number">2.</span> <span class="toc-text">$n \leq 50000$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#由一个字符构成"><span class="toc-number">3.</span> <span class="toc-text">由一个字符构成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#n-leq-500000"><span class="toc-number">4.</span> <span class="toc-text">$n \leq 500000$</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -394,6 +444,24 @@
     </script>
 </div>
   
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/" title="下一篇: Codeforces Global Round 1 (CF1110)（A-F）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/卡常者π酱-题解/">卡常者π酱 题解</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/">Codeforces Global Round 1 (CF1110)（A-F）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/13/AtCoder-NIKKEI-Programming-Contest-2019-暂缺F/">[AtCoder] NIKKEI Programming Contest 2019 (暂缺F)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/AtCoder-Yahoo-Programming-Contest-2019/">[AtCoder] Yahoo Programming Contest 2019</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/11/Codeforces-Round538-(Div. 2)-(CF1114)/">Codeforces Round #538 (Div. 2)(CF1114)</a></li></ul>
 
 
 
