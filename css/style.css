@@ -547,6 +547,10 @@ a {
   #container .tags a {
     line-height: 45px;
   }
+  #container #comments {
+    margin: 0.625rem 10px !important;
+    padding: 1rem !important;
+  }
 }
 .header-author {
   text-align: center;
@@ -880,6 +884,36 @@ a {
   -moz-background-size: 103%;
   background-size: 103%;
 }
+#header .header-nav .social .洛谷 {
+  background: url("/img/洛谷.png") center no-repeat #fff;
+  -webkit-background-size: 95%;
+  -moz-background-size: 95%;
+  background-size: 95%;
+}
+#header .header-nav .social .UOJ {
+  background: url("/img/UOJ.png") center no-repeat #fff;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+#header .header-nav .social .LOJ {
+  background: url("/img/LOJ.png") center no-repeat #fff;
+  -webkit-background-size: 70%;
+  -moz-background-size: 70%;
+  background-size: 70%;
+}
+#header .header-nav .social .vjudge {
+  background: url("/img/vjudge.png") center no-repeat #fff;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+#header .header-nav .social .BZOJ {
+  background: url("/img/BZOJ.png") center no-repeat #fff;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
 #header .header-nav .social .GitHub {
   background: url("//cdn.bootcss.com/logos/0.2.0/github-octocat.svg") no-repeat #fff;
   -webkit-background-size: 90%;
@@ -1077,6 +1111,19 @@ color
 }
 .post-list li:hover a {
   color: #88acdb;
+}
+.ui-tooltip {
+  padding: 6px;
+  max-width: 30em;
+  -webkit-box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
+  box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
+  color: #fff;
+  font-family: "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 0.9em;
+  background: rgba(0,0,0,0.65);
+}
+body .ui-tooltip {
+  border: 1px solid #fff;
 }
 .pace .pace-progress {
   background: #77b6ff;
