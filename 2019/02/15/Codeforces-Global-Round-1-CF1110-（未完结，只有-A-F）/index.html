@@ -26,14 +26,13 @@
 </script>
 
 <meta name="description" content="继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。 因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。">
-<meta name="keywords" content="Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces Global Round 1 (CF1110)（A-F）">
 <meta property="og:url" content="https://www.violetoj.com/2019/02/15/Codeforces-Global-Round-1-CF1110-（未完结，只有-A-F）/index.html">
 <meta property="og:site_name" content="hankeke">
 <meta property="og:description" content="继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。 因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-14T02:39:24.686Z">
+<meta property="og:updated_time" content="2019-03-18T10:41:55.714Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces Global Round 1 (CF1110)（A-F）">
 <meta name="twitter:description" content="继续补题。因为看见同学打了这场，而且涨分还不错，所以觉得这套题目可能会比较有意思。 因为下午要开学了，所以恐怕暂时不能把这套题目补完了，所以先把 A-F 放上来。">
@@ -89,7 +88,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -167,7 +168,7 @@
             </div>
         
 
-        <div id="switch-area" class="switch-area">
+        <div id="switch-area" class="switch-area" style="height: 360px;">
             <div class="switch-wrap">
                 <section class="switch-part switch-part1">
                     <nav class="header-menu">
@@ -200,6 +201,16 @@
                             
                                 <a class="fa QQ" href="/1131938614" title="QQ"></a>
                             
+                                <a class="fa 洛谷" href="https://www.luogu.org/space/show?uid=28164" title="洛谷"></a>
+                            
+                                <a class="fa BZOJ" href="https://lydsy.com/JudgeOnline/userinfo.php?user=hankeke" title="BZOJ"></a>
+                            
+                                <a class="fa UOJ" href="http://uoj.ac/user/profile/hankeke" title="UOJ"></a>
+                            
+                                <a class="fa LOJ" href="https://loj.ac/user/3678" title="LOJ"></a>
+                            
+                                <a class="fa vjudge" href="https://vjudge.net/user/hankeke" title="vjudge"></a>
+                            
                         </ul>
                     </nav>
                 </section>
@@ -207,7 +218,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Codeforces/">Codeforces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单调队列/">单调队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后缀自动机/">后缀自动机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树合并/">线段树合并</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/单调队列/">单调队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后缀自动机/">后缀自动机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树合并/">线段树合并</a></li></ul>
                     </div>
                 </section>
                 
@@ -274,6 +285,16 @@
                             
                                 <a class="fa QQ" target="_blank" href="/1131938614" title="QQ"></a>
                             
+                                <a class="fa 洛谷" target="_blank" href="https://www.luogu.org/space/show?uid=28164" title="洛谷"></a>
+                            
+                                <a class="fa BZOJ" target="_blank" href="https://lydsy.com/JudgeOnline/userinfo.php?user=hankeke" title="BZOJ"></a>
+                            
+                                <a class="fa UOJ" target="_blank" href="http://uoj.ac/user/profile/hankeke" title="UOJ"></a>
+                            
+                                <a class="fa LOJ" target="_blank" href="https://loj.ac/user/3678" title="LOJ"></a>
+                            
+                                <a class="fa vjudge" target="_blank" href="https://vjudge.net/user/hankeke" title="vjudge"></a>
+                            
                         </ul>
             </nav>
         </header>                
@@ -307,12 +328,12 @@
       
       <div class="article-info article-info-post">
         
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li></ul>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Codeforces/">Codeforces</a>
     </div>
 
+
+        
         <div class="clearfix"></div>
         
           <div style="margin-top:10px;">
@@ -505,9 +526,10 @@ c_i' - c_{i - 1} = c_{i + 1} - c_i</script><p>也就是说一次操作其实是�
             </div>
         </div>
         
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <div class="visit">
                 
-                    <span id="busuanzi_container_site_pv" style="display:none">
+                    <span id="busuanzi_container_site_uv" style="display:none">
                         <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -613,21 +635,5 @@ MathJax.Hub.Queue(function() {
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
